@@ -68,3 +68,87 @@ Vary: Accept
     }
 ]
 ```
+Game category endpoint : http://127.0.0.1:8000/game-categories/
+```
+HTTP 200 OK
+Allow: GET, POST, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+
+[
+    {
+        "url": "http://127.0.0.1:8000/game-categories/2/",
+        "pk": 2,
+        "name": "2D Mobile Arcade",
+        "games": []
+    },
+    {
+        "url": "http://127.0.0.1:8000/game-categories/1/",
+        "pk": 1,
+        "name": "3D RPG",
+        "games": [
+            "http://127.0.0.1:8000/games/1/",
+            "http://127.0.0.1:8000/games/2/"
+        ]
+    }
+]
+```
+
+Games endpoint : http://127.0.0.1:8000/games/
+```
+HTTP 200 OK
+Allow: GET, POST, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+
+[
+    {
+        "url": "http://127.0.0.1:8000/games/1/",
+        "game_category": "3D RPG",
+        "name": "God of War",
+        "released_date": "2016-06-21T03:02:00Z",
+        "played": false
+    },
+    {
+        "url": "http://127.0.0.1:8000/games/2/",
+        "game_category": "3D RPG",
+        "name": "Superman vs Aquaman",
+        "released_date": "2016-06-21T03:02:00Z",
+        "played": false
+    }
+]
+```
+Player score endpoint : http://127.0.0.1:8000/player-scores/
+```
+HTTP 200 OK
+Allow: GET, POST, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+
+[
+    {
+        "url": "http://127.0.0.1:8000/player-scores/1/",
+        "pk": 1,
+        "score": 35000,
+        "score_date": "2016-06-21T03:02:00Z",
+        "player": "Patric",
+        "game": "Superman vs Aquaman"
+    },
+    {
+        "url": "http://127.0.0.1:8000/player-scores/2/",
+        "pk": 2,
+        "score": 25000,
+        "score_date": "2016-06-21T03:02:00Z",
+        "player": "kevin",
+        "game": "Superman vs Aquaman"
+    },
+    {
+        "url": "http://127.0.0.1:8000/player-scores/3/",
+        "pk": 3,
+        "score": 19000,
+        "score_date": "2016-09-21T03:02:00Z",
+        "player": "kevin",
+        "game": "God of War"
+    }
+]
+```
