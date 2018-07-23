@@ -1,5 +1,5 @@
 # GameAPI_Skeleton
-An skeleton API of game using django rest framework and postgresQL
+A skeleton API of the game using Django rest framework and PostgreSQL
 
 
 Player endpoint: http://127.0.0.1:8000/players/
