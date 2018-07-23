@@ -55,6 +55,7 @@ class PlayerScoreDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = PlayerScoreSerializer
     name = 'playerscore-detail'
 
+#This root will show the api endpoints
 class ApiRoot(generics.GenericAPIView):
     name = 'api-root'
     def get(self,request, *args, **kwargs):
