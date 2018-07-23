@@ -4,6 +4,7 @@ An skeleton API of game using django rest framework and postgresQL
 
 Player endpoint: http://127.0.0.1:8000/players/
 
+```
 HTTP 200 OK
 Allow: GET, POST, HEAD, OPTIONS
 Content-Type: application/json
@@ -66,3 +67,4 @@ Vary: Accept
         ]
     }
 ]
+```
